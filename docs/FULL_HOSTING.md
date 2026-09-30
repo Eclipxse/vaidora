@@ -13,6 +13,8 @@ The selected setup runs the existing Next.js application and image worker on a N
 
 ## First installation on a Linux server
 
+Before installing, run `bash scripts/vps-preflight.sh` on the selected server to inspect its OS, architecture, memory, disk, existing containers and listening ports. The script is read only and does not print environment variables or container credentials. Keep existing services and their ports intact.
+
 Install Docker Engine with Compose and Node 24. From the checkout:
 
 ```sh
