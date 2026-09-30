@@ -7,7 +7,7 @@ const config: NextConfig = {
     "exceljs",
   ],
   images: {
-    formats: ["image/avif", "image/webp"],
+    formats: ["image/webp"],
     localPatterns: [
       { pathname: "/**", search: "" },
       { pathname: "/display/**", search: "?v=contour-2" },

@@ -1,11 +1,13 @@
 import "dotenv/config";
 import assert from "node:assert/strict";
 import { writeFile, unlink } from "node:fs/promises";
+import sharp from "sharp";
 import { db } from "../src/lib/db";
 import { publicFile } from "../src/lib/compositor";
 const base = process.env.APP_ORIGIN!;
 let cookie = "",
-  jobId = "";
+  jobId = "",
+  uploadedUrl = "";
 const qaName = `Vaidora QA ${Date.now()}`;
 const checks: string[] = [];
 async function req(path: string, body?: unknown, origin = base, auth = true) {
@@ -50,6 +52,25 @@ async function main() {
     await r.text();
   }
   await pass("17 public routes return 200");
+  for (const source of [
+    "/vaidora-logo-transparent.png",
+    "/media/products/good-girl/100ml.webp",
+  ]) {
+    const optimized = await fetch(
+      `${base}/_next/image?url=${encodeURIComponent(source)}&w=384&q=75`,
+      {
+        headers: { Accept: "image/avif,image/webp,image/*,*/*;q=0.8" },
+        signal: AbortSignal.timeout(15000),
+      },
+    );
+    assert.equal(optimized.status, 200, source);
+    assert.equal(optimized.headers.get("content-type"), "image/webp");
+    const metadata = await sharp(
+      Buffer.from(await optimized.arrayBuffer()),
+    ).metadata();
+    assert(metadata.width && metadata.height, source);
+  }
+  await pass("Browser image negotiation serves decodable logo and product images");
   let r = await req("/api/admin/products", undefined, base, false);
   assert.equal(r.status, 401);
   await pass("Unauthenticated admin API denied");
@@ -62,6 +83,33 @@ async function main() {
   assert(r.headers.get("set-cookie")!.includes("HttpOnly"));
   assert(r.headers.get("set-cookie")!.includes("SameSite=strict"));
   await pass("Owner login returns protected session cookie");
+  const uploadBytes = await sharp({
+    create: { width: 16, height: 16, channels: 3, background: "#7a3025" },
+  })
+    .png()
+    .toBuffer();
+  const upload = new FormData();
+  upload.set(
+    "file",
+    new File([new Uint8Array(uploadBytes)], "verification.png", {
+      type: "image/png",
+    }),
+  );
+  r = await fetch(base + "/api/admin/upload", {
+    method: "POST",
+    headers: { Origin: base, Cookie: cookie },
+    body: upload,
+  });
+  assert.equal(r.status, 200);
+  const uploaded = await r.json();
+  uploadedUrl = uploaded.url;
+  assert.match(uploadedUrl, /^\/uploads\/[a-f0-9-]+\.png$/);
+  assert.equal(uploaded.width, 16);
+  assert.equal(uploaded.height, 16);
+  r = await req("/media" + uploadedUrl);
+  assert.equal(r.status, 200);
+  assert.deepEqual(Buffer.from(await r.arrayBuffer()), uploadBytes);
+  await pass("Authenticated upload persists and serves the original image");
   const all = await (await req("/api/admin/products")).json();
   const active = all.filter((p: any) => p.active && !p.archived);
   assert.equal(active.length, 87);
@@ -199,7 +247,7 @@ async function main() {
         checkedAt: new Date().toISOString(),
         checks,
         visualVerification:
-          "Blocked by browser URL security policy; no browser access attempted after denial.",
+          "HTTP and API checks only; rendered browser verification is recorded separately.",
         externalMessagesSent: 0,
       },
       null,
@@ -208,6 +256,7 @@ async function main() {
   );
 }
 main().finally(async () => {
+  if (uploadedUrl) await unlink(publicFile(uploadedUrl)).catch(() => {});
   const fixture = await db.product.findFirst({
     where: { name: qaName },
     include: { variants: true },
