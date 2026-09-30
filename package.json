@@ -1,0 +1,53 @@
+{
+  "name": "vaidora-perfume",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3000",
+    "build": "next build --webpack",
+    "db:generate": "prisma generate",
+    "start": "next start --hostname 127.0.0.1 --port 3000",
+    "typecheck": "tsc --noEmit",
+    "db:setup": "prisma db push && tsx scripts/seed.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "test": "tsx --test tests/core.test.ts",
+    "worker": "tsx scripts/worker.ts"
+  },
+  "dependencies": {
+    "@fontsource/arsenal": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.2.0",
+    "@fontsource/manrope": "^5.2.0",
+    "@fontsource/syne": "^5.3.0",
+    "@fontsource/urbanist": "^5.3.0",
+    "@napi-rs/canvas": "^0.1.80",
+    "@phosphor-icons/react": "^2.1.10",
+    "@prisma/client": "^6.19.0",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^17.2.0",
+    "exceljs": "^4.4.0",
+    "jose": "^6.1.0",
+    "motion": "^13.4.4",
+    "next": "16.3.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.35.4",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "prettier": "^3.9.9",
+    "prisma": "^6.19.0",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "deepmerge-ts": "8.0.0",
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}

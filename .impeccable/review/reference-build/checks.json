@@ -1,0 +1,60 @@
+{
+  "responsive": [
+    {
+      "clientWidth": 310,
+      "documentWidth": 310,
+      "overflow": false,
+      "requestedWidth": 320,
+      "top": 0
+    },
+    {
+      "requestedWidth": 390,
+      "clientWidth": 380,
+      "documentWidth": 380,
+      "overflow": false
+    },
+    {
+      "clientWidth": 758,
+      "documentWidth": 758,
+      "overflow": false,
+      "requestedWidth": 768,
+      "top": 0
+    },
+    {
+      "requestedWidth": 1440,
+      "clientWidth": 1430,
+      "documentWidth": 1430,
+      "overflow": false
+    }
+  ],
+  "product": {
+    "buyBottom": 778,
+    "chosen": "20 ML₹250",
+    "draft": "https://wa.me/917863065807?text=Hi Vaidora! I’d like to buy:\n\nFragrance: GOOD GIRL\nOption: 20 ML\nQuantity: 2\nListed price: ₹250 each\n\nProduct: http://localhost:3000/products/good-girl?size=20\n\nPlease confirm availability and the total including delivery.",
+    "navTop": 778,
+    "overflow": false,
+    "quantity": "2",
+    "width": 390
+  },
+  "bundle": {
+    "link": "https://wa.me/917863065807?text=Hi Vaidora! I’d like this fragrance bundle:\n\n1. GOOD GIRL — 12 ML\n2. DIOR SAUVAGE — 12 ML\n3. WHITE OUD — 12 ML\n\nPlease confirm availability, gift packaging and the total including delivery.",
+    "overflow": false,
+    "progress": "",
+    "width": 390
+  },
+  "search": "GOOD GIRL returned the exact matching fragrance",
+  "tabs": "ArrowRight selected Unisex; 8 cards",
+  "favorites": "GOOD GIRL saved then removed",
+  "faq": "First disclosure opened; no overflow",
+  "correctedCaptures": [
+    "desktop.png",
+    "mobile.png",
+    "phone-320-before-fix.png",
+    "tablet-768-before-fix.png"
+  ],
+  "assetProvenance": {
+    "rasters": 198,
+    "missing": 0,
+    "decodedPixelsPreserved": true
+  }
+}

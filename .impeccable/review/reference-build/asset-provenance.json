@@ -1,0 +1,41 @@
+{
+  "derivedAssets": [
+    {
+      "file": "public/display/tom-ford-oud-wood-100ml.png",
+      "source": "public/products/tom-ford-oud-wood/100ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/dior-sauvage-100ml.png",
+      "source": "public/products/dior-sauvage/100ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/good-girl-100ml.png",
+      "source": "public/products/good-girl/100ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/white-oud-100ml.png",
+      "source": "public/products/white-oud/100ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/ysl-libre-12ml.png",
+      "source": "public/products/ysl-libre/12ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/creed-aventus-12ml.png",
+      "source": "public/products/creed-aventus/12ml.webp",
+      "method": "photo-gradient alpha matte; supplied bottle RGB unchanged"
+    },
+    {
+      "file": "public/display/photographic-environment.webp",
+      "source": "public/masters/100ml.png",
+      "method": "expanded and softened genuine photo edge fields and tabletop"
+    }
+  ],
+  "metadataEmbedded": 198,
+  "decodedPixelsPreserved": true
+}

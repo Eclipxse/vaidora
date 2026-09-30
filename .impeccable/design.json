@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T20:56:04.449Z",
+  "title": "Design System: Vaidora storefront",
+  "extensions": {
+    "colorMeta": {
+      "gold": {
+        "role": "primary",
+        "displayName": "Gold",
+        "tonalRamp": [
+          "oklch(15.00% 0.1029 81.95)",
+          "oklch(26.43% 0.1029 81.95)",
+          "oklch(37.86% 0.1029 81.95)",
+          "oklch(49.29% 0.1029 81.95)",
+          "oklch(60.71% 0.1029 81.95)",
+          "oklch(72.14% 0.1029 81.95)",
+          "oklch(83.57% 0.1029 81.95)",
+          "oklch(95.00% 0.1029 81.95)"
+        ]
+      },
+      "accent-text": {
+        "role": "primary",
+        "displayName": "Gold accent text",
+        "tonalRamp": [
+          "oklch(15.00% 0.0853 76.09)",
+          "oklch(26.43% 0.0853 76.09)",
+          "oklch(37.86% 0.0853 76.09)",
+          "oklch(49.29% 0.0853 76.09)",
+          "oklch(60.71% 0.0853 76.09)",
+          "oklch(72.14% 0.0853 76.09)",
+          "oklch(83.57% 0.0853 76.09)",
+          "oklch(95.00% 0.0853 76.09)"
+        ]
+      },
+      "burgundy": {
+        "role": "secondary",
+        "displayName": "Burgundy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0778 22.39)",
+          "oklch(26.43% 0.0778 22.39)",
+          "oklch(37.86% 0.0778 22.39)",
+          "oklch(49.29% 0.0778 22.39)",
+          "oklch(60.71% 0.0778 22.39)",
+          "oklch(72.14% 0.0778 22.39)",
+          "oklch(83.57% 0.0778 22.39)",
+          "oklch(95.00% 0.0778 22.39)"
+        ]
+      },
+      "fact-burgundy": {
+        "role": "secondary",
+        "displayName": "Deep fact burgundy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0589 30.31)",
+          "oklch(26.43% 0.0589 30.31)",
+          "oklch(37.86% 0.0589 30.31)",
+          "oklch(49.29% 0.0589 30.31)",
+          "oklch(60.71% 0.0589 30.31)",
+          "oklch(72.14% 0.0589 30.31)",
+          "oklch(83.57% 0.0589 30.31)",
+          "oklch(95.00% 0.0589 30.31)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "tonalRamp": [
+          "oklch(15.00% 0.0074 80.72)",
+          "oklch(26.43% 0.0074 80.72)",
+          "oklch(37.86% 0.0074 80.72)",
+          "oklch(49.29% 0.0074 80.72)",
+          "oklch(60.71% 0.0074 80.72)",
+          "oklch(72.14% 0.0074 80.72)",
+          "oklch(83.57% 0.0074 80.72)",
+          "oklch(95.00% 0.0074 80.72)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 0)",
+          "oklch(26.43% 0.0000 0)",
+          "oklch(37.86% 0.0000 0)",
+          "oklch(49.29% 0.0000 0)",
+          "oklch(60.71% 0.0000 0)",
+          "oklch(72.14% 0.0000 0)",
+          "oklch(83.57% 0.0000 0)",
+          "oklch(95.00% 0.0000 0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 0)",
+          "oklch(26.43% 0.0000 0)",
+          "oklch(37.86% 0.0000 0)",
+          "oklch(49.29% 0.0000 0)",
+          "oklch(60.71% 0.0000 0)",
+          "oklch(72.14% 0.0000 0)",
+          "oklch(83.57% 0.0000 0)",
+          "oklch(95.00% 0.0000 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted reading",
+        "tonalRamp": [
+          "oklch(15.00% 0.0146 75.25)",
+          "oklch(26.43% 0.0146 75.25)",
+          "oklch(37.86% 0.0146 75.25)",
+          "oklch(49.29% 0.0146 75.25)",
+          "oklch(60.71% 0.0146 75.25)",
+          "oklch(72.14% 0.0146 75.25)",
+          "oklch(83.57% 0.0146 75.25)",
+          "oklch(95.00% 0.0146 75.25)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.0179 81.33)",
+          "oklch(26.43% 0.0179 81.33)",
+          "oklch(37.86% 0.0179 81.33)",
+          "oklch(49.29% 0.0179 81.33)",
+          "oklch(60.71% 0.0179 81.33)",
+          "oklch(72.14% 0.0179 81.33)",
+          "oklch(83.57% 0.0179 81.33)",
+          "oklch(95.00% 0.0179 81.33)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Pale panel",
+        "tonalRamp": [
+          "oklch(15.00% 0.0189 83.06)",
+          "oklch(26.43% 0.0189 83.06)",
+          "oklch(37.86% 0.0189 83.06)",
+          "oklch(49.29% 0.0189 83.06)",
+          "oklch(60.71% 0.0189 83.06)",
+          "oklch(72.14% 0.0189 83.06)",
+          "oklch(83.57% 0.0189 83.06)",
+          "oklch(95.00% 0.0189 83.06)"
+        ]
+      },
+      "photo-ground": {
+        "role": "neutral",
+        "displayName": "Photo ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.0196 63.53)",
+          "oklch(26.43% 0.0196 63.53)",
+          "oklch(37.86% 0.0196 63.53)",
+          "oklch(49.29% 0.0196 63.53)",
+          "oklch(60.71% 0.0196 63.53)",
+          "oklch(72.14% 0.0196 63.53)",
+          "oklch(83.57% 0.0196 63.53)",
+          "oklch(95.00% 0.0196 63.53)"
+        ]
+      },
+      "campaign-ground": {
+        "role": "neutral",
+        "displayName": "Campaign ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.0143 67.10)",
+          "oklch(26.43% 0.0143 67.10)",
+          "oklch(37.86% 0.0143 67.10)",
+          "oklch(49.29% 0.0143 67.10)",
+          "oklch(60.71% 0.0143 67.10)",
+          "oklch(72.14% 0.0143 67.10)",
+          "oklch(83.57% 0.0143 67.10)",
+          "oklch(95.00% 0.0143 67.10)"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0245 71.55)",
+          "oklch(26.43% 0.0245 71.55)",
+          "oklch(37.86% 0.0245 71.55)",
+          "oklch(49.29% 0.0245 71.55)",
+          "oklch(60.71% 0.0245 71.55)",
+          "oklch(72.14% 0.0245 71.55)",
+          "oklch(83.57% 0.0245 71.55)",
+          "oklch(95.00% 0.0245 71.55)"
+        ]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm white",
+        "tonalRamp": [
+          "oklch(15.00% 0.0181 78.24)",
+          "oklch(26.43% 0.0181 78.24)",
+          "oklch(37.86% 0.0181 78.24)",
+          "oklch(49.29% 0.0181 78.24)",
+          "oklch(60.71% 0.0181 78.24)",
+          "oklch(72.14% 0.0181 78.24)",
+          "oklch(83.57% 0.0181 78.24)",
+          "oklch(95.00% 0.0181 78.24)"
+        ]
+      },
+      "focus-on-dark": {
+        "role": "secondary",
+        "displayName": "Focus on dark",
+        "tonalRamp": [
+          "oklch(15.00% 0.1106 93.33)",
+          "oklch(26.43% 0.1106 93.33)",
+          "oklch(37.86% 0.1106 93.33)",
+          "oklch(49.29% 0.1106 93.33)",
+          "oklch(60.71% 0.1106 93.33)",
+          "oklch(72.14% 0.1106 93.33)",
+          "oklch(83.57% 0.1106 93.33)",
+          "oklch(95.00% 0.1106 93.33)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Campaign display",
+        "purpose": "Arsenal campaign titles; desktop fluid size with explicit mobile reductions."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Arsenal collection and section headings, reducing to 28px on mobile."
+      },
+      "title": {
+        "displayName": "Product title",
+        "purpose": "Compact Urbanist exact fragrance names with natural wrapping."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Urbanist reading and catalog text; paragraphs open their line-height."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Urbanist primary and secondary controls; mobile contexts have explicit compact variants."
+      }
+    },
+    "shadows": [
+      {
+        "name": "header-divider",
+        "value": "0 1px 0 #e2dbcf",
+        "purpose": "Thin boundary under the solid sticky header."
+      },
+      {
+        "name": "dialog-lift",
+        "value": "0 20px 80px #21180d30",
+        "purpose": "Native dialog top-layer depth; backdrop uses #21180d70 with 2px blur."
+      },
+      {
+        "name": "floating-enquiry",
+        "value": "0 5px 18px #28282828",
+        "purpose": "Lift beneath the fixed round WhatsApp action."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-store",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Button active transform and slight fine-pointer image scaling."
+      },
+      {
+        "name": "action-state",
+        "value": "180ms",
+        "purpose": "Button brightness and active compression."
+      },
+      {
+        "name": "campaign-crossfade",
+        "value": "550ms ease",
+        "purpose": "Campaign opacity; inactive slides are inert and hidden."
+      },
+      {
+        "name": "campaign-autoplay",
+        "value": "7000ms",
+        "purpose": "Pauses on interaction, offscreen/hidden state, reduced motion or manual slide choice."
+      },
+      {
+        "name": "image-hover",
+        "value": "350ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Scale 1.025 on fine-pointer product/category hover."
+      },
+      {
+        "name": "native-rail",
+        "value": "smooth / instant under reduced motion",
+        "purpose": "Scroll by the rail viewport width, using native scroll snapping."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "intermediate",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "narrow-phone",
+        "value": "370px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary catalog and personal-enquiry action with the implemented metallic gold gradient.",
+      "html": "<div class=\"ds-store\"><button class=\"ds-button\">Choose options<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 24px;border:0;border-radius:6px;background:linear-gradient(45deg,#a66d30,#ffe58e 50%,#e0b057);color:#21180d;font-family:var(--body);font-size:15px;font-weight:700;line-height:1.4;letter-spacing:0;cursor:pointer;transition:filter 180ms,transform 180ms var(--ease-store)}.ds-button:hover{filter:brightness(.95);color:#21180d}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}"
+    },
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action with a gold stroke and warm hover ground.",
+      "html": "<div class=\"ds-store\"><button class=\"ds-button ds-outline\">View all results<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 24px;border:0;border-radius:6px;background:linear-gradient(45deg,#a66d30,#ffe58e 50%,#e0b057);color:#21180d;font-family:var(--body);font-size:15px;font-weight:700;line-height:1.4;letter-spacing:0;cursor:pointer;transition:filter 180ms,transform 180ms var(--ease-store)}.ds-button:hover{filter:brightness(.95);color:#21180d}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}.ds-outline{background:transparent;border:1px solid var(--gold);color:var(--ink)}.ds-outline:hover{background:#ede4d2;color:var(--ink)}"
+    },
+    {
+      "name": "Light action",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "White action variant with the same control dimensions and interaction states.",
+      "html": "<div class=\"ds-store\"><button class=\"ds-button ds-light\">View collection</button></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 24px;border:0;border-radius:6px;background:linear-gradient(45deg,#a66d30,#ffe58e 50%,#e0b057);color:#21180d;font-family:var(--body);font-size:15px;font-weight:700;line-height:1.4;letter-spacing:0;cursor:pointer;transition:filter 180ms,transform 180ms var(--ease-store)}.ds-button:hover{filter:brightness(.95);color:#21180d}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}.ds-light{background:#fff;color:var(--ink)}.ds-light:hover{color:#21180d}"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "White native field with a warm divider, burgundy focus and readable Urbanist text.",
+      "html": "<div class=\"ds-store\"><input class=\"ds-field\" aria-label=\"Search fragrances\" placeholder=\"Search fragrances\"></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-field{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:11px 13px;font:16px/1.4 var(--body);max-width:100%;caret-color:var(--accent-text)}.ds-field::placeholder{color:var(--muted)}"
+    },
+    {
+      "name": "Catalog filters",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "White default and burgundy selected states from the catalog category controls.",
+      "html": "<div class=\"ds-store\"><div class=\"ds-filters\"><button class=\"ds-filter\" aria-pressed=\"false\">Women</button><button class=\"ds-filter ds-selected\" aria-pressed=\"true\">Men</button></div></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-filters{display:flex;gap:8px;flex-wrap:wrap}.ds-filter{min-height:44px;padding:10px 20px;border:1px solid var(--line);background:#fff;border-radius:5px;font:600 14px/1.4 var(--body);color:var(--ink);cursor:pointer}.ds-filter.ds-selected{background:#552121;color:#fff;border-color:#552121}"
+    },
+    {
+      "name": "Collection tabs",
+      "kind": "nav",
+      "description": "Unboxed uppercase collection labels with the selected ink underline. Live tabs implement Arrow keys, Home and End.",
+      "html": "<div class=\"ds-store\"><div class=\"ds-collection-tabs\" role=\"tablist\" aria-label=\"Fragrance collections\"><button role=\"tab\" aria-selected=\"true\" tabindex=\"0\">Men’s perfumes</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Women’s perfumes</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Unisex perfumes</button></div></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-collection-tabs{display:flex;justify-content:center;gap:40px;overflow-x:auto}.ds-collection-tabs button{min-height:44px;padding:12px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font:700 14px/1.4 var(--body);text-transform:uppercase;letter-spacing:.07em;white-space:nowrap;cursor:pointer}.ds-collection-tabs [aria-selected=true]{color:var(--ink);border-color:var(--ink)}@media(max-width:700px){.ds-collection-tabs{justify-content:flex-start;gap:26px}.ds-collection-tabs button{font-size:11px;letter-spacing:.05em}}"
+    },
+    {
+      "name": "Product card information",
+      "kind": "card",
+      "refersTo": "product-card-body",
+      "description": "Compact white body beneath the source card’s square original photograph; photography is deliberately omitted from this standalone sample.",
+      "html": "<div class=\"ds-store\"><article class=\"ds-card-body\"><div class=\"ds-meta\"><span>Unisex</span><span>100 ML</span></div><h3><a class=\"ds-title\" href=\"/products/tom-ford-oud-wood?size=100\">Tom Ford Oud Wood</a></h3><div class=\"ds-price\"><strong>₹900</strong></div><a class=\"ds-button ds-options\" href=\"/products/tom-ford-oud-wood?size=100\">Choose options<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></article></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 24px;border:0;border-radius:6px;background:linear-gradient(45deg,#a66d30,#ffe58e 50%,#e0b057);color:#21180d;font-family:var(--body);font-size:15px;font-weight:700;line-height:1.4;letter-spacing:0;cursor:pointer;transition:filter 180ms,transform 180ms var(--ease-store)}.ds-button:hover{filter:brightness(.95);color:#21180d}.ds-button:active{transform:scale(.97)}.ds-button:disabled{opacity:.45;cursor:not-allowed}.ds-card-body{width:250px;max-width:100%;display:flex;flex-direction:column;padding:12px 10px 10px;background:#fff;box-shadow:none;border:0}.ds-meta{display:flex;justify-content:space-between;gap:8px;color:#756b5f;font-size:12px;line-height:1.5;text-transform:uppercase;margin-bottom:8px}.ds-card-body h3{font:700 16px/1.4 var(--body);margin:0;min-height:45px}.ds-title{display:block;color:var(--ink);font:700 16px/1.4 var(--body);letter-spacing:0;text-decoration:none;min-height:0}.ds-title:hover{color:var(--accent-text)}.ds-price{display:flex;align-items:center;margin:10px 0 16px;gap:12px}.ds-price strong{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}.ds-options{min-height:44px;margin-top:auto;padding:10px;font-size:14px;text-transform:uppercase;gap:8px;text-decoration:none}@media(max-width:700px){.ds-card-body{padding:10px 8px 8px}.ds-card-body h3{font-size:14px;min-height:40px}.ds-title{font-size:14px}.ds-price{margin:8px 0 12px}.ds-price strong{font-size:18px}.ds-options{font-size:11px;min-height:40px;padding:10px 7px}}"
+    },
+    {
+      "name": "Rail controls",
+      "kind": "button",
+      "refersTo": "rail-arrow",
+      "description": "Circular gold previous/next controls, with unavailable rail ends disabled.",
+      "html": "<div class=\"ds-store\"><div class=\"ds-rail-controls\"><button class=\"ds-rail-arrow\" aria-label=\"Previous fragrances\" disabled><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m15 5-7 7 7 7\"/></svg></button><button class=\"ds-rail-arrow\" aria-label=\"Next fragrances\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg></button></div></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-rail-controls{display:flex;justify-content:flex-end;gap:9px}.ds-rail-arrow{display:grid;place-items:center;min-width:44px;height:44px;border:0;border-radius:50%;background:var(--gold);color:#21180d;cursor:pointer}.ds-rail-arrow:hover{background:#d7b575}.ds-rail-arrow:disabled{opacity:.35;cursor:not-allowed}"
+    },
+    {
+      "name": "Selected fragrance size",
+      "kind": "chip",
+      "description": "Actual format and catalog price with pale gold selected fill and deeper gold outline.",
+      "html": "<div class=\"ds-store\"><button class=\"ds-size\" type=\"button\" aria-pressed=\"true\"><span>12 ML</span><small>₹250</small></button></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-size{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:86px;min-height:65px;padding:10px 12px;background:#ede1c9;border:1px solid #7f5c24;border-radius:5px;color:var(--ink);font:400 14px/1.4 var(--body);cursor:pointer}.ds-size small{font-size:12px}"
+    },
+    {
+      "name": "Pointed category frame",
+      "kind": "custom",
+      "description": "Actual stepped gold portal and restrained geometric pattern from the category SVG; it frames photography without drawing a substitute bottle.",
+      "html": "<div class=\"ds-store\"><a class=\"ds-category\" href=\"/collections?size=100\"><svg class=\"ds-category-frame\" viewBox=\"0 0 180 300\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><pattern id=\"ds-category-pattern\" width=\"36\" height=\"36\" patternUnits=\"userSpaceOnUse\"><path d=\"M18 2Q25 11 34 18Q25 25 18 34Q11 25 2 18Q11 11 18 2Z\" fill=\"none\" stroke=\"#ece8e0\" stroke-width=\".6\"/></pattern></defs><path d=\"M90 6L119 25H145V47L172 62V288H8V62L35 47V25H61Z\" fill=\"#faf8f4\"/><path d=\"M90 6L119 25H145V47L172 62V288H8V62L35 47V25H61Z\" fill=\"url(#ds-category-pattern)\" stroke=\"#b28c42\" stroke-width=\"1.5\"/></svg><span>100 ML Perfumes</span></a></div>",
+      "css": ".ds-store{--ink:#282828;--muted:#69635b;--line:#e2dbcf;--soft:#f7f4ef;--gold:#b28c42;--accent-text:#7f5c24;--focus:#552121;--body:Urbanist,Arial,sans-serif;--ease-store:cubic-bezier(.16,1,.3,1);font-family:var(--body);color:var(--ink)}.ds-store :is(button,a,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-store *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}.ds-category{display:flex;flex-direction:column;align-items:center;gap:14px;width:180px;color:var(--ink);text-decoration:none;text-align:center}.ds-category-frame{width:100%;height:auto;display:block}.ds-category>span{font:400 25px/1.4 Arsenal,Georgia,serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Framed fragrance storefront",
+    "overview": "Cream browsing surfaces, gold geometric frames and burgundy campaign bands give Vaidora's original logo and bottle photographs a clear retail hierarchy. Arsenal headlines introduce collections and campaigns; compact Urbanist names, prices and controls keep the catalog readable. The photographic bottle remains the subject, with ornament around it; the opening campaign places it over a full-bleed environment expanded from the supplied photograph's empty background and floor.\n\nThe user pinned the AdilQadri homepage as visual authority for this world, substituting Vaidora branding and the supplied catalog. The system applies to public store pages and shared store components. Storefront overrides remain scoped; owner tools retain their existing operational interface. Catalog truth constrains every visual treatment: exact supplied names, actual option prices and customer-sent WhatsApp drafts.",
+    "keyCharacteristics": [
+      "Cream and white catalog surfaces punctuated by burgundy and deep burgundy bands.",
+      "Self-hosted Arsenal headlines and compact Urbanist product names, reading text and controls.",
+      "Original photographic bottles inside gold pointed, lobed and scalloped geometry.",
+      "Full-bleed five-slide campaigns and native horizontal product rails.",
+      "Centered original brand mark, native navigation/search dialogs and fixed mobile navigation.",
+      "Catalog-derived choices and prices with representative-image disclosure and personal enquiry."
+    ],
+    "rules": [
+      {
+        "name": "The Paired Foreground Rule",
+        "body": "Light catalog surfaces use ink; burgundy sections use white and a light focus outline. Decorative gold and the deeper gold text role are separate jobs.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Arsenal carries campaign and section headings. Urbanist carries product names, reading, navigation and actions; product titles must not inherit a display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Catalog Rule",
+        "body": "Product cards have no border or shadow. Photography, white card bodies and the surrounding section ground establish their hierarchy.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Customer-Controlled Motion Rule",
+        "body": "Autoplay remains interruptible, inactive slides stay inert, and native browsing controls remain usable without decorative motion.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the supplied Vaidora mark and original photographic bottle, label and glass.",
+      "**Do** derive product names, categories, options, prices and counts from the verified catalog.",
+      "**Do** keep compact Urbanist product names and let exact names wrap.",
+      "**Do** preserve representative-image disclosure when photographed and selected capacities differ.",
+      "**Do** retain keyboard tabs, native rails, carousel pause conditions and safe-area mobile separation.",
+      "**Do** scope the storefront system away from owner tools."
+    ],
+    "donts": [
+      "**Don't** add fabricated ratings, discounts, certifications, rankings, founder stories or commercial promises.",
+      "**Don't** present a WhatsApp draft as a sent message, payment or confirmed order.",
+      "**Don't** replace bottle photography with AI regeneration or geometric bottle substitutes.",
+      "**Don't** reuse the superseded cobalt/Syne/ribbon world as the current storefront specification.",
+      "**Don't** treat a source-based specification or an earlier screenshot review as final rendered approval."
+    ]
+  }
+}

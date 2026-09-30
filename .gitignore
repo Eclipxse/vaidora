@@ -1,0 +1,17 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+data/
+public/uploads/
+private/
+*.log
+.wrangler/
+.dev.vars*
+out/
+dist/
+.cloudflare/
+.impeccable/before-*/
+.impeccable/review/**/*.png
+.impeccable/review/*.cjs
