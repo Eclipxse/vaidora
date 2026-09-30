@@ -1,0 +1,8 @@
+vaidoraperfume.com {
+  encode zstd gzip
+  reverse_proxy web:3000
+}
+
+www.vaidoraperfume.com {
+  redir https://vaidoraperfume.com{uri} permanent
+}

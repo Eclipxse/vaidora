@@ -40,4 +40,4 @@ The campaign's automatic width originally expanded at 320 and 768 px when aspect
 
 The independent review identified eight material corrections spanning the hero, dark/light section rhythm, category frames, product typography, decorative geometry, footer contrast, campaign outlines and design documentation. The final [verdict](../.impeccable/review/reference-finish-verdict.md) scores all eight resolved and returns `disposition: ship`. Required captures are valid and no material correction-batch regression was observed. This verdict covers those listed fixes, rather than an exhaustive review of every route or timed animation state.
 
-No Lighthouse benchmark, public deployment, admin write operation, live WhatsApp message or payment was performed during this redesign.
+No Lighthouse benchmark, public deployment, admin write operation, live WhatsApp message or payment was performed during this redesign. Subsequent full-hosting verification used a separate local container database and exercised owner writes there; see [DEPLOYMENT.md](DEPLOYMENT.md) and [RELEASE_CHECKS.json](RELEASE_CHECKS.json).

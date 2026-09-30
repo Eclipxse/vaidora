@@ -11,6 +11,8 @@ const config: NextConfig = {
     localPatterns: [
       { pathname: "/**", search: "" },
       { pathname: "/display/**", search: "?v=contour-2" },
+      { pathname: "/media/products/**" },
+      { pathname: "/media/uploads/**" },
     ],
   },
   async headers() {

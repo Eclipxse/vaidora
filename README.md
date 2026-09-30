@@ -38,7 +38,7 @@ Images start from original masters. Only configured label regions change; no AI 
 
 Only the 12 ML and 100 ML photographs have confirmed capacities. Other options use explicitly disclosed representative photography. Upload correctly assigned masters for 6/20/50 ML and the car diffuser before requiring exact imagery. Notes, longevity, stock, business details and final shipping/return terms still need owner input. No reference-site reviews, certifications, logos or campaign assets were copied.
 
-The site has **not been deployed publicly**. It requires a Node host, PostgreSQL and durable image storage shared with its worker; static-only hosting cannot run the compositor.
+The application is published at [Eclipxse/vaidora](https://github.com/Eclipxse/vaidora). Public hosting is pending the Node server selection. The chosen setup preserves the full owner studio behind the Cloudflare-managed domain; see [FULL_HOSTING.md](docs/FULL_HOSTING.md) for the Docker package and [DEPLOYMENT.md](docs/DEPLOYMENT.md) for verified status. Static-only hosting cannot run the compositor.
 
 ## Fresh installation
 

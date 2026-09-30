@@ -15,3 +15,5 @@ dist/
 .impeccable/before-*/
 .impeccable/review/**/*.png
 .impeccable/review/*.cjs
+deploy/production.env
+deploy/*.private.*

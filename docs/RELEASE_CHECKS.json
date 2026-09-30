@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "environment": "isolated Linux Docker Compose project vaidora-release-check",
+  "productionBuild": "passed on Node 24",
+  "coreTests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "integration": "17 public routes, protected admin, origin protection, template proof, approved worker job, generated media, edits, archive and logout passed",
+  "catalog": {
+    "products": 87,
+    "variants": 522
+  },
+  "versionedNextImage": "200 image response",
+  "bootstrapPreservesOwnerEdits": true,
+  "ownerEditFixtureRestored": true,
+  "publicDeployment": false
+}
