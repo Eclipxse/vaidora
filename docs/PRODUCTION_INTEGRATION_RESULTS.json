@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-30T15:07:10.275Z",
+  "checks": [
+    "17 public routes return 200",
+    "Browser image negotiation serves decodable logo and product images",
+    "Unauthenticated admin API denied",
+    "Owner login returns protected session cookie",
+    "Authenticated upload persists and serves the original image",
+    "87 fragrances / 522 enabled options / confirmed categories",
+    "Cross-origin mutation denied",
+    "Authenticated admin pages render",
+    "Bulk import proof generated before approval",
+    "Approved background job creates one grouped product with two images",
+    "New image files served without restarting the application",
+    "Product edit persists",
+    "Product archive works",
+    "Missing product renders noindex fallback; invalid API and media paths rejected",
+    "Owner logout clears session"
+  ],
+  "visualVerification": "HTTP and API checks only; rendered browser verification is recorded separately.",
+  "externalMessagesSent": 0
+}

@@ -14,5 +14,22 @@
   "versionedNextImage": "200 image response",
   "bootstrapPreservesOwnerEdits": true,
   "ownerEditFixtureRestored": true,
-  "publicDeployment": false
+  "publicDeployment": true,
+  "production": {
+    "origin": "https://vaidoraperfume.com",
+    "applicationCommit": "1d1d5ffd0ac9d75ab9baefa6c407732363cc971a",
+    "imageManifest": "sha256:19ba853b3d08f3f5c8d554e20806125e5fddb624cc2a799e5c337fbc2d33487f",
+    "environment": "Ubuntu 24.04 VPS; isolated vaidora-production Compose services",
+    "build": "passed on the VPS with Node 24 and baseline CPU-compatible libvips/Sharp",
+    "coreTests": { "passed": 10, "failed": 0 },
+    "integrationResults": "PRODUCTION_INTEGRATION_RESULTS.json",
+    "catalog": { "products": 87, "variants": 522 },
+    "cloudflareEncryption": "Full (strict)",
+    "certificateRenewal": "webroot simulation passed; enabled active timer and Nginx reload hook",
+    "imageNegotiation": "browser Accept header returns decodable WebP logo and product image",
+    "renderedBrowser": "desktop homepage at 1440x900; mobile homepage and product at 390x844; no document overflow; search, menu and product selection passed",
+    "initialBackup": "private server-side PostgreSQL, media, environment and Nginx backup",
+    "scheduledOffServerBackups": false,
+    "externalMessagesSent": 0
+  }
 }

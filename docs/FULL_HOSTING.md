@@ -1,6 +1,6 @@
 # Full storefront and owner studio hosting
 
-The selected setup runs the existing Next.js application and image worker on a Node server, with PostgreSQL and persistent photo storage. Cloudflare manages `vaidoraperfume.com` and can proxy its HTTP/HTTPS traffic. This preserves live catalog editing, uploads, template proofs and bulk image generation.
+The live setup runs the existing Next.js application and image worker on the owner's VPS at `/opt/vaidora`, with PostgreSQL and persistent photo storage. Cloudflare proxies `vaidoraperfume.com` with Full (strict) TLS. The existing Nginx server routes the new domain to loopback port 3080; Let's Encrypt uses automatic webroot renewal. This preserves live catalog editing, uploads, template proofs and bulk image generation. Current status and maintenance commands are in [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Included deployment package
 
@@ -10,6 +10,7 @@ The selected setup runs the existing Next.js application and image worker on a N
 - `scripts/bootstrap-production.ts`: initializes the schema and imports the snapshot into a new database. An existing catalog/settings database skips import to preserve owner edits. Schema changes never use `--accept-data-loss`.
 - `scripts/create-production-env.cjs`: creates unique private production credentials once, without printing or overwriting them.
 - `deploy/Caddyfile`: optional automatic HTTPS and a permanent `www` redirect.
+- `deploy/nginx.conf`: the installed Vaidora-only virtual host for an existing Nginx server, with canonical redirects, upload limits and the certificate-renewal webroot.
 
 ## First installation on a Linux server
 
@@ -55,4 +56,4 @@ Container replacement preserves the named volumes. Removing a volume deletes its
 
 ## Release verification
 
-The package is tested locally with the separate Compose project `vaidora-release-check`. Its database, media volumes and private credentials are independent of the working preview. Current results and the external-hosting boundary are recorded in [DEPLOYMENT.md](DEPLOYMENT.md).
+The package was tested locally with the separate Compose project `vaidora-release-check`, then built and exercised on the actual VPS through the public Cloudflare HTTPS domain. The isolated local database and media remain independent of the working preview and production. Current results are recorded in [DEPLOYMENT.md](DEPLOYMENT.md).
