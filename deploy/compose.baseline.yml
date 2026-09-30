@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      dockerfile: deploy/Dockerfile.baseline
+  worker:
+    build:
+      dockerfile: deploy/Dockerfile.baseline
+  bootstrap:
+    build:
+      dockerfile: deploy/Dockerfile.baseline

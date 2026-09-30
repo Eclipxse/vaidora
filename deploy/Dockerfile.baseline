@@ -1,0 +1,70 @@
+# This VPS exposes x86-64 baseline instructions without SSE4.2. Build the
+# current image libraries from source rather than using x86-64-v2 binaries.
+FROM node:24-bookworm-slim AS vips-build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates curl xz-utils build-essential pkg-config meson ninja-build \
+    libglib2.0-dev libexpat1-dev libjpeg62-turbo-dev libpng-dev libwebp-dev \
+    libtiff-dev librsvg2-dev liblcms2-dev libexif-dev libheif-dev \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /tmp/vips
+RUN curl --fail --location --retry 3 \
+      https://github.com/libvips/libvips/releases/download/v8.18.6/vips-8.18.6.tar.xz \
+      --output vips.tar.xz \
+    && echo '3c41e1d5458081bfa4a5bc54e116c46259c75c6760a18027764555632b9dda3e  vips.tar.xz' | sha256sum --check \
+    && tar --extract --file vips.tar.xz --strip-components=1 \
+    && CFLAGS='-march=x86-64 -mtune=generic' CXXFLAGS='-march=x86-64 -mtune=generic' \
+      meson setup build --prefix=/usr/local --libdir=lib \
+        -Ddeprecated=false -Dexamples=false -Dintrospection=disabled \
+        -Dhighway=disabled -Dorc=disabled \
+        -Djpeg=enabled -Dpng=enabled -Dwebp=enabled -Drsvg=enabled \
+        -Dlcms=enabled -Dexif=enabled -Dheif=enabled -Dtiff=enabled \
+    && meson compile -C build -j 2 \
+    && meson install -C build
+
+FROM node:24-bookworm-slim AS base
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates openssl fonts-liberation fonts-dejavu-core \
+    libglib2.0-0 libexpat1 libjpeg62-turbo libpng16-16 libwebp7 \
+    libwebpmux3 libwebpdemux2 libtiff6 librsvg2-2 liblcms2-2 libexif12 libheif1 \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=vips-build /usr/local/lib/ /usr/local/lib/
+RUN ldconfig
+WORKDIR /app
+
+FROM base AS build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential pkg-config python3 libglib2.0-dev libexpat1-dev \
+    libjpeg62-turbo-dev libpng-dev libwebp-dev libtiff-dev librsvg2-dev \
+    liblcms2-dev libexif-dev libheif-dev \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=vips-build /usr/local/include/ /usr/local/include/
+COPY package.json package-lock.json ./
+COPY prisma ./prisma
+RUN npm ci \
+    && SHARP_FORCE_GLOBAL_LIBVIPS=1 CXXFLAGS='-march=x86-64 -mtune=generic' \
+      npm explore sharp -- npm run build \
+    && node -e "const sharp=require('sharp'); const {createCanvas}=require('@napi-rs/canvas'); const canvas=createCanvas(32,32); canvas.getContext('2d').fillRect(0,0,32,32); sharp(canvas.toBuffer('image/png')).webp().toBuffer().then(buffer=>{if(!buffer.length)process.exit(1); console.log('Native image processing passed on this CPU')}).catch(error=>{console.error(error);process.exit(1)})" \
+    && npm run db:generate
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN DATABASE_URL=postgresql://build:build@127.0.0.1:5432/build npm run build
+
+FROM base AS runtime
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1
+RUN groupadd --gid 10001 vaidora && useradd --uid 10001 --gid vaidora --create-home vaidora
+COPY --from=build --chown=vaidora:vaidora /app/node_modules ./node_modules
+COPY --from=build --chown=vaidora:vaidora /app/.next ./.next
+COPY --from=build --chown=vaidora:vaidora /app/public ./public
+COPY --from=build --chown=vaidora:vaidora /app/prisma ./prisma
+COPY --from=build --chown=vaidora:vaidora /app/src ./src
+COPY --from=build --chown=vaidora:vaidora /app/scripts ./scripts
+COPY --from=build --chown=vaidora:vaidora /app/tests ./tests
+COPY --from=build --chown=vaidora:vaidora /app/docs ./docs
+COPY --from=build --chown=vaidora:vaidora /app/deploy ./deploy
+COPY --from=build --chown=vaidora:vaidora /app/package.json /app/tsconfig.json /app/next.config.ts ./
+RUN mkdir -p public/uploads && chown -R vaidora:vaidora public/uploads
+USER vaidora
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=15s --start-period=30s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "node_modules/next/dist/bin/next", "start", "--hostname", "0.0.0.0", "--port", "3000"]

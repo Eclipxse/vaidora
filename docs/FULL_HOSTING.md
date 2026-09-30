@@ -37,6 +37,16 @@ docker compose --env-file .env.production -f deploy/compose.yml --profile https 
 
 In Cloudflare, connect the apex to the server using a proxied A/AAAA record, and `www` to the apex using a proxied CNAME. Keep mail and verification records intact. Use Full (strict) TLS after the origin certificate is valid. Confirm the public storefront, owner login, uploads and worker before calling the cutover complete.
 
+## Servers with older virtual CPU instruction sets
+
+Some VPS providers expose a baseline QEMU CPU without SSE4.2. Sharp's current prebuilt Linux x64 binaries require a newer instruction set. On those hosts, use the additional Compose file for builds:
+
+```sh
+docker compose --env-file .env.production -f deploy/compose.yml -f deploy/compose.baseline.yml build
+```
+
+The alternate Dockerfile builds the current libvips 8.18.6 release and Sharp from source for baseline x86-64. The libvips source archive has a pinned SHA-256 checksum, and an image-processing check runs before the application build. This adds build time but keeps the same web, worker, database and persistent volumes. Normal startup/update commands still use `deploy/compose.yml`; retain the extra file whenever rebuilding on this VPS.
+
 ## Updates and backups
 
 Back up PostgreSQL and all three media volumes together before updates. Update source with `git pull --ff-only`, rebuild the image, run bootstrap for safe schema synchronization, then restart web and worker. The bootstrap import skips a populated catalog. Do not rerun the local seed/import scripts against the production database after owner edits.
